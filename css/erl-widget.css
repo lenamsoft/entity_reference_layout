@@ -1,0 +1,438 @@
+.field--widget-entity-reference-layout-widget fieldset.erl-field {
+  background: #f5f5f3;
+  border: none;
+  margin: 30px 0;
+  padding: 60px 30px;
+}
+.field--widget-entity-reference-layout-widget fieldset.erl-field > legend {
+  line-height: 30px;
+  top: 15px;
+}
+.field--widget-entity-reference-layout-widget .erl-layout {
+  margin-bottom: 30px;
+  position: relative;
+  padding: 25px 0 0 0;  
+}
+.field--widget-entity-reference-layout-widget .erl-layout__content {
+  padding: 0 30px 15px 30px;
+}
+.field--widget-entity-reference-layout-widget .erl-layout__regions,
+.field--widget-entity-reference-layout-widget .erl-disabled-wrapper {
+  background: #fff;
+}
+
+.field--widget-entity-reference-layout-widget .erl-layout-select .form-radios {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+.field--widget-entity-reference-layout-widget .layout-radio-item {
+  padding: 5px;
+  background: none;
+  cursor: pointer;
+  margin: 10px 10px 10px 0;
+  text-align: left;
+  width: 150px;
+}
+.field--widget-entity-reference-layout-widget .layout-radio-item input[type=radio] {
+  display: none;
+}
+.field--widget-entity-reference-layout-widget .layout-radio-item .form-item {
+  margin-top: 0;
+}
+.field--widget-entity-reference-layout-widget .layout-radio-item label {
+  font-size: small;
+}
+.field--widget-entity-reference-layout-widget .layout-radio-item .layout-icon-wrapper {
+  float: left;
+  margin-right: 5px;
+}
+.field--widget-entity-reference-layout-widget .layout-radio-item.active {
+  background: #fff;
+  outline: 2px dotted blue;
+}
+.field--widget-entity-reference-layout-widget .layout-radio-item .layout-icon {
+  float: left;
+  margin: 0;
+}
+.field--widget-entity-reference-layout-widget .erl-add-item {
+  text-align: center;
+}
+
+.field--widget-entity-reference-layout-widget .erl-layout.erl-item::before {
+  content: "";
+  top: 15px;
+  height: 1px;
+  background-color: #ccc;
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+} 
+.field--widget-entity-reference-layout-widget .erl-layout .erl-item,
+.field--widget-entity-reference-layout-widget .erl-disabled-items .erl-item  {
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  padding: 30px;
+  transition: all .15s linear;
+  position: relative;
+}
+.field--widget-entity-reference-layout-widget .reversed .erl-item {
+  border-color: rgba(0, 0, 0, .25);
+}
+.field--widget-entity-reference-layout-widget .erl-item .erl-actions .form-wrapper {
+  background: none;
+}
+.field--widget-entity-reference-layout-widget .erl-layout-region:hover {
+  border: 1px solid #ccc;
+}
+.field--widget-entity-reference-layout-widget .erl-layout .erl-item:hover {
+  border-color: #0074bd;
+}
+.field--widget-entity-reference-layout-widget .reversed .erl-item:hover {
+  border-color: #fff;
+}
+.field--widget-entity-reference-layout-widget .erl-item:hover:before {
+  opacity: 1;
+}
+.field--widget-entity-reference-layout-widget .erl-layout-region {
+  box-sizing: border-box;
+  position: relative;
+  padding: 0;
+  border: 1px dashed #e5e5e3;
+  transition: all .15s linear;
+  min-height: 30px;
+  padding: 30px;
+}
+
+/* -- Layout Controls -- */
+
+.field--widget-entity-reference-layout-widget .erl-layout .layout-controls,
+.field--widget-entity-reference-layout-widget .erl-layout .erl-actions {
+  background: #f5f5f3;
+}
+.field--widget-entity-reference-layout-widget .erl-layout .erl-item .layout-controls,
+.field--widget-entity-reference-layout-widget .erl-layout .erl-item .erl-actions{
+  background: none;
+}
+.field--widget-entity-reference-layout-widget .layout-controls {
+  height: 30px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 90px;
+  opacity: 0;
+}
+
+.field--widget-entity-reference-layout-widget .erl-item:hover > .layout-controls {
+  opacity: 1;
+}
+.field--widget-entity-reference-layout-widget .erl-layout-section .erl-item:hover > .layout-controls {
+  opacity: 1;
+}
+.field--widget-entity-reference-layout-widget .erl-layout-section .erl-item .layout-controls {
+  background: none;
+}
+.layout-handle,
+.layout-down,
+.layout-up {
+  cursor: pointer;
+  height: 30px;
+  left: 0;
+  overflow: hidden;
+  opacity: .75;
+  position: absolute;
+  top: 0;
+  text-indent: 100%;
+  width: 30px;
+}
+.layout-handle:hover,
+.layout-down:hover,
+.layout-up:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+.layout-handle {
+  background: url(../img/icon-move.png) 0 0 no-repeat;
+  background-size: cover;
+  display: none;
+}
+.reversed .layout-handle {
+  background-image: url(../img/icon-move--reversed.png);
+}
+.dragula-enabled .layout-handle {
+  display: block;
+}
+.layout-down {
+  background: url(../img/icon-down.png) 0 0 no-repeat;
+  background-size: cover;
+  left: 60px;
+}
+.reversed .layout-down {
+  background-image: url(../img/icon-down--reversed.png);
+}
+.layout-up {
+  background: url(../img/icon-up.png) 0 0 no-repeat;
+  background-size: cover;
+  left: 30px;
+}
+.reversed .layout-up {
+  background-image: url(../img/icon-up--reversed.png);
+}
+.field--widget-entity-reference-layout-widget .erl-layout:first-child > .layout-controls .layout-up,
+.field--widget-entity-reference-layout-widget .erl-layout:first-child .erl-item:first-child .layout-up {
+  pointer-events: none;
+  opacity: .15;
+}
+.field--widget-entity-reference-layout-widget .erl-layout:first-child .erl-item:first-child .layout-up {
+  pointer-events: none;
+  opacity: .15;
+}
+.field--widget-entity-reference-layout-widget .erl-layout:last-child > .layout-controls .layout-down,
+.field--widget-entity-reference-layout-widget .erl-layout:last-child .erl-item:nth-last-child(2) .layout-down {
+  pointer-events: none;
+  opacity: .15;
+}
+.gu-mirror .layout-down,
+.gu-mirror .layout-up {
+  opacity: .25;
+}
+
+/* -- Item Actions (Edit and Delete Buttons) -- */
+.field--widget-entity-reference-layout-widget .erl-actions,
+.gu-mirror .erl-actions {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 0;
+  margin: 0;
+  visibility: hidden;
+}
+.field--widget-entity-reference-layout-widget .erl-item:hover > .erl-actions {
+  visibility: visible;
+}
+.field--widget-entity-reference-layout-widget .erl-actions input.erl-edit,
+.field--widget-entity-reference-layout-widget .erl-actions input.erl-remove {
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+  margin: 0;
+  text-indent: 100%;
+  overflow: hidden;
+  border: none;
+  padding: 0;
+  opacity: .5;
+  transition: all .15s linear;
+  transition: none;
+}
+.field--widget-entity-reference-layout-widget .erl-actions input.erl-edit {
+  background: url(../img/icon-edit.png) 0 0 no-repeat;
+  background-size: cover;
+}
+.field--widget-entity-reference-layout-widget .reversed .erl-actions input.erl-edit {
+  background-image: url(../img/icon-edit--reversed.png);
+}
+.field--widget-entity-reference-layout-widget .erl-actions input.erl-remove {
+  background: url(../img/icon-delete.png) 0 0 no-repeat;
+  background-size: cover;
+}
+.field--widget-entity-reference-layout-widget .reversed .erl-actions input.erl-remove {
+  background-image: url(../img/icon-delete--reversed.png);
+}
+.field--widget-entity-reference-layout-widget .erl-actions input.erl-edit:hover,
+.field--widget-entity-reference-layout-widget .erl-actions input.erl-remove:hover {
+  opacity: 1;
+  box-shadow: none;
+}
+
+/* -- Add content and add section buttons. -- */
+.erl-add-content-wrapper {
+  position: relative;
+}
+.erl-add-content__container {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+}
+.erl-add-content__toggle {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -15px;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  z-index: 10;
+  width: 20px;
+  height: 20px;
+  line-height: 1;
+  padding: 0;
+  opacity: 0;
+  font-size: large;
+  width: 30px;
+  height: 30px;
+  text-indent: 100%;
+  overflow: hidden;
+  background: url(../img/icon-add.png) 0 0 no-repeat;
+  background-size: cover;
+  transition: all .15s linear;
+  -webkit-appearance: none;
+  outline: none;
+}
+.reversed .erl-add-content__toggle {
+  background-image: url(../img/icon-add--reversed.png);
+}
+.erl-add-content__toggle.active {
+  transform: rotate(45deg);
+}
+.erl-layout-region:hover button.erl-add-content__toggle {
+  opacity: .75;
+}
+.erl-layout-region:hover button.erl-add-content__toggle:hover,
+.erl-layout-region:hover button.erl-add-content__toggle.active,
+.erl-layout-region button.erl-add-content__toggle.active {
+  opacity: 1;
+}
+
+.erl-add-content__group {
+  width: auto;
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  background: #fff;
+  z-index: 12;
+  border: none;
+  padding: 0;
+  text-align: left;
+  margin-left: -15px;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, .25);
+}
+.erl-add-content__group.hidden {
+  visibility: hidden !important;
+}
+.erl-add-content__item {
+  display: block;
+  text-align: left;
+}
+.erl-add-content__group button {
+  background: none;
+  display: block;
+  width: 100%;
+  border: none;
+  color: #0074bd;
+  text-align: left;
+  padding: 9px 18px;
+}
+.erl-add-content__group button img {
+  width: 24px;
+  height: 24px;
+  margin-right: 9px;
+  margin-top: -2px;
+  float: left;
+}
+.erl-add-content__group button:hover {
+  background: #e5f1f8;
+  color: #0074bd;
+  display: block;
+  width: 100%;
+  border: none;
+}
+.erl-add-content--single {
+  padding: 10px 0;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  z-index: 10;
+}
+.erl-item > .erl-add-content--single {
+  opacity: 0;
+  bottom: -43px;
+}
+.erl-item:hover > .erl-add-content--single {
+  opacity: 1;
+}
+.erl-empty {
+  position: relative;
+}
+.erl-add-content--single button {
+  background: none;
+  border: none;
+  box-shadow: none;
+  text-transform: uppercase;
+  font-size: small;
+  font-weight: bold;
+  color: #9b9b9b;
+}
+.erl-add-content--single button:hover {
+  color: #5e5e5e;
+  text-decoration: underline;
+}
+.erl-add-content--single button .icon {
+  font-weight: bold;
+  font-size: large;
+}
+
+/**
+ * Disabled items.
+ */
+.erl-disabled-items {
+  color: gray;
+  position: relative;
+  margin-top: 30px;
+  border: 1px dashed #e5e5e3;
+}
+.erl-disabled-items .fieldset-wrapper {
+  margin-top: 10px;
+}
+.erl-disabled-items__title {
+  margin: 0;
+  padding: 10px;
+}
+.erl-disabled-items__description {
+  position: absolute;
+  width: 100%;
+  margin: 0;
+  top: 0;
+  left: 0;
+  margin-top: 20px;
+  text-align: center;
+}
+.erl-disabled-wrapper {
+  position: relative;
+  min-height: 60px;
+  padding-bottom: 0;
+  padding-top: 0;
+  border: 1px dashed #e5e5e3;
+}
+
+/* -- Dragula Specific Styles -- */
+
+.gu-mirror {
+  background: #fff;
+  border: 1px solid #0074bd;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, .25);
+  cursor: grabbing;
+  padding: 30px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.gu-mirror:before {
+  content: "";
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  left: 0;
+  top: 0;
+  background: url(../img/icon-move.png) 0 0 no-repeat;
+  background-size: cover;
+}
+.reversed .gu-mirror:before {
+  background-image: url(../img/icon-move--reversed.png);
+}
+.field--widget-entity-reference-layout-widget .erl-item.gu-transit {
+  background: #0074bd;
+}
+.field--widget-entity-reference-layout-widget .erl-item.gu-transit > * {
+  visibility: hidden;
+}

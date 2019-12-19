@@ -1,0 +1,13 @@
+name: 'Entity reference layout'
+type: module
+description: 'Entity reference field with layouts'
+core: 8.x
+package: 'Field types'
+dependencies:
+  - drupal:paragraphs
+  - drupal:layout_discovery
+
+# Information added by Drupal.org packaging script on 2019-10-30
+version: '8.x-1.0-alpha3'
+project: 'entity_reference_layout'
+datestamp: 1572443320
