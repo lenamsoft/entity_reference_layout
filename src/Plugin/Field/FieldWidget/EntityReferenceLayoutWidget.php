@@ -383,7 +383,7 @@ class EntityReferenceLayoutWidget extends WidgetBase implements ContainerFactory
         '#attributes' => ['class' => ['erl-actions']],
         'edit' => [
           '#type' => 'submit',
-          '#name' => 'edit_' . $delta,
+          '#name' => 'edit_' . $this->fieldName . '_' . $delta,
           '#value' => $this->t('Edit'),
           '#attributes' => ['class' => ['erl-edit']],
           '#limit_validation_errors' => [array_merge($parents, [$this->fieldName])],
@@ -397,7 +397,7 @@ class EntityReferenceLayoutWidget extends WidgetBase implements ContainerFactory
         ],
         'remove' => [
           '#type' => 'submit',
-          '#name' => 'remove_' . $delta,
+          '#name' => 'remove_' . $this->fieldName . '_' . $delta,
           '#value' => $this->t('Remove'),
           '#attributes' => ['class' => ['erl-remove']],
           '#limit_validation_errors' => [array_merge($parents, [$this->fieldName])],
@@ -470,6 +470,7 @@ class EntityReferenceLayoutWidget extends WidgetBase implements ContainerFactory
             '#value' => $this->t('Remove'),
             '#delta' => $delta,
             '#submit' => [[$this, 'removeItemConfirmSubmit']],
+            '#limit_validation_errors' => [array_merge($parents, [$this->fieldName])],
             '#ajax' => [
               'callback' => [$this, 'elementAjax'],
               'wrapper' => $this->wrapperId,
@@ -481,6 +482,7 @@ class EntityReferenceLayoutWidget extends WidgetBase implements ContainerFactory
             '#value' => $this->t('Cancel'),
             '#delta' => $delta,
             '#submit' => [[$this, 'removeItemCancelSubmit']],
+            '#limit_validation_errors' => [array_merge($parents, [$this->fieldName])],
             '#attributes' => [
               'class' => ['erl-cancel'],
             ],
