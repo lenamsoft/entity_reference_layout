@@ -27,4 +27,5 @@ erl_widget:
   js:
     js/erl-widget.js: {}
   dependencies:
+    - core/drupal.displace
     - entity_reference_layout/dragula
